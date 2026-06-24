@@ -1,20 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es2022",
+    "target": "es5",
     "module": "commonjs",
-    "strict": true,
+    "rootDir": "./",
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "paths": {
+      "@modules/*": ["modules/*"],
+      "@config/*": ["config/*"],
+      "@shared/*": ["shared/*"],
+      "@errors/*": ["errors/*"],
+      "@utils/*": ["utils/*"]
+    },
     "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "dist",
-    "rootDir": "src",
-    "baseUrl": "./",
-    "paths": {
-      "@modules/*": ["src/modules/*"],
-      "@config/*": ["src/config/*"],
-      "@shared/*": ["src/shared/*"],
-      "@errors/*": ["src/errors/*"],
-      "@utils/*": ["src/utils/*"]
-    }
+    "resolveJsonModule": true
   }
 }
